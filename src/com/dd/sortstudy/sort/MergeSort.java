@@ -19,9 +19,15 @@ public class MergeSort {
      * 递归使用归并排序，对arr[l...r]的范围进行排序
      */
     static void sort(int[] arr, int l, int r) {
-        if (l >= r) {
+        // if (l >= r) {
+        //     return;
+        // }
+        // 当数据较小时，可以使用插入排序优化，因为插入排序对于近乎有序的数组效果更好
+        if(r - l >15 ) {
+            InsertSortII.sort(arr, arr.length);
             return;
         }
+
         // 有风险，当l与r都足够大时，会引起溢出
         int mid = (l + r) / 2;
         sort(arr, l, mid);

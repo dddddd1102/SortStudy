@@ -12,7 +12,7 @@ import com.dd.sortstudy.util.SortUtils;
 public class Main {
 
     public static void main(String[] args) {
-        int[] a = SortUtils.generateRepeatRandomArray(100000, 5);
+        int[] a = SortUtils.generateRandomArray(100000);
         int[] a1 = a;   
         int[] a2 = a;
         int[] a3 = a;
