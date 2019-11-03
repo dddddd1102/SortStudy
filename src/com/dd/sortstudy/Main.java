@@ -1,8 +1,9 @@
 package com.dd.sortstudy;
-
 import com.dd.sortstudy.sort.InsertSortII;
 import com.dd.sortstudy.sort.InsertionSort;
 import com.dd.sortstudy.sort.MergeSort;
+import com.dd.sortstudy.sort.SelectionSort;
+import com.dd.sortstudy.util.SortUtils;
 
 /**
  * user: daidong
@@ -11,15 +12,20 @@ import com.dd.sortstudy.sort.MergeSort;
 public class Main {
 
     public static void main(String[] args) {
-        int a[] = new int[]{18, 20, 22, 18, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
-//        InsertionSort.sort(a, 10);
-//        InsertSortII.sort(a, 10);
-        MergeSort.sort(a, 14);
-        for (int i : a) {
-            System.out.print(i + " ");
-        }
+        int[] a = SortUtils.generateRepeatRandomArray(100000, 5);
+        int[] a1 = a;   
+        int[] a2 = a;
+        int[] a3 = a;
+
+        SelectionSort.sort(a2, a2.length);
+
+        InsertionSort.sort(a1, a1.length);
+
+        InsertSortII.sort(a3, a3.length);
+
+        MergeSort.sort(a, a.length);
+
         System.out.println();
     }
-
 
 }

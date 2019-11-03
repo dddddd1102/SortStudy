@@ -10,6 +10,7 @@ import com.dd.sortstudy.util.SortUtils;
 public class SelectionSort {
 
     public static void sort(int arr[], int n) {
+        long start = System.currentTimeMillis();
         for (int i = 0; i < n; i++) {
             // 寻找 [i, n) 区间最小值
             int minIndex = i;
@@ -20,5 +21,8 @@ public class SelectionSort {
             }
             SortUtils.swap(arr, i, minIndex);
         }
+        long end = System.currentTimeMillis();
+        float time = (end - start) / 1000.f;
+        System.out.println("SelectSort: " + time + "s");
     }
 }

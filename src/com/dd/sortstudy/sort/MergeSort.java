@@ -8,7 +8,11 @@ package com.dd.sortstudy.sort;
 public class MergeSort {
 
     public static void sort(int[] arr, int length) {
+        long start = System.currentTimeMillis();
         sort(arr, 0, length - 1);
+        long end = System.currentTimeMillis();
+        float time = (end - start) / 1000.f;
+        System.out.println("MergeSort: " + time + "s");
     }
 
     /**

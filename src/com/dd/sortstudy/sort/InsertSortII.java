@@ -10,6 +10,7 @@ package com.dd.sortstudy.sort;
 public class InsertSortII {
 
     public static void sort(int[] arr, int length) {
+        long start = System.currentTimeMillis();
         for (int i = 0; i < length; i++) {
             // 寻找元素arr[i]合适的插入位置
             int e = arr[i];
@@ -20,5 +21,8 @@ public class InsertSortII {
             }
             arr[j] = e;
         }
+        long end = System.currentTimeMillis();
+        float time = (end - start) / 1000.f;
+        System.out.println("InsertSortII: " + time + "s");
     }
 }
